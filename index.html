@@ -8,6 +8,7 @@
     <title>Crystal Game</title>
     <!-- <link rel="stylesheet" href="assets/css/reset.css"/> -->
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>    
     <div class="header">
         <h1>Crystal Collector</h1>
@@ -15,8 +16,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="row instructions">
-            <div class="col-md-8 offset-md-2">
+        <div class="instructions">
+            <div>
                 <p>You will be given a random number at the start of the game.</p>
                 <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
                 <p>You win the game by matching your total score to the random number, you lose the game if your total score goes about the random number.</p>
@@ -24,35 +25,42 @@
                 <p>Each time when the game stats, the game will change the values of each cyrstal.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 offset-md-2 targetNumber"></div>
-            <div class="col-md-4">
-                <h4 class="wins">Wins:</h4>
-                <h4 class="losses">Losses:</h4>
+        <div class="row">  
+            <div class="col-md-3 targetNumber">Target: 
+                <span id="randomNumber"></span>
             </div>
-        </div>
-        <div class="row crystal">
-            <div class="col-md-2 offset-md-2 crystalBlue"><img src="assets/images/Blue-crystal.png"/></div>
-            <div class="col-md-2 crystalRed"><img src="assets/images/red-crystal.png"/></div>
-            <div class="col-md-2 crystalPurple"><img src="assets/images/purple-crystals.png"/></div>
-            <div class="col-md-2 crystalYellow"><img src="assets/images/yellow-crystal.png"/></div>
 
-        </div>
-        <div class="row">
-            <div class="col-md-8 offset-md-2 totalScore">
-                <h4>Your Total Score: </h4>
+            <div class="col-md-3 youWonLost">
+                <h2><span id="winMessage"></span></h2>
             </div>
+            <div class="col-md-3">
+                <h2>Wins:
+                    <span id="wins"></span>
+                    <br>
+                    Losses: 
+                    <span id="losses"></span>
+                </h2>
+            </div>   
         </div>
+        <div class="row crystals">
+            <div class="col-md-3">
+            <img src="assets/images/Blue-crystal.png" id="blue"/></div>
+            <div class="col-md-3">
+            <img src="assets/images/red-crystal.png" id="red"/></div>
+            <div class="col-md-3">
+            <img src="assets/images/purple-crystals.png" id="purple"/></div>
+            <div class="col-md-3">
+            <img src="assets/images/yellow-crystal.png" id="yellow"/></div>
+        </div>
+        <div class="totalScore">
+            <h4>Your Total Score: 
+                <span id="finalScore"></span>
+            </h4>
+        </div>
+        
 
     </div>
 
-    <script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        resetGame();
-        updateDisplay();
-
-
-    </script>
-    
+   
 </body>
 </html>
