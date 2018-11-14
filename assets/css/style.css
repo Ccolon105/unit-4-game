@@ -1,0 +1,30 @@
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.instructions {
+    height: 300px;
+    background-color: aqua;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.targetNumber {
+    height: 80px;
+    background-color: aquamarine;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    height: 80px;
+    background-color: rgb(148, 231, 231);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+}
