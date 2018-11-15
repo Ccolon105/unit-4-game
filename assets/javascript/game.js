@@ -1,7 +1,7 @@
 $(document).ready ()
     var Random = Math.floor(Math.random()*101+19)
     $("#randomNumber").text(Random);
-
+  
     var blueNum = Math.floor(Math.random()*11+1);
     var redNum = Math.floor(Math.random()*11+1);
     var yellowNum = Math.floor(Math.random()*11+1);
@@ -15,7 +15,7 @@ $(document).ready ()
     $("#losses").text(losses);
 
     function resetGame() {
-        Random=Math.floor(Math.random()*101+19);
+        Random;
         $("#randomNumber").text(Random);
         blueNum = Math.floor(Math.random()*11+1);
         redNum = Math.floor(Math.random()*11+1);
